@@ -1,0 +1,12 @@
+This thing has a barebones RTTI system and hotreloading to see if I could
+dynamically update structures at runtime.
+
+Since this only patches a single structure, technically you would be patching
+a whole "state" structure to make the most use of this system.
+
+You can make the structure patching more complicated since it really only
+depends on the RTTI, so the thing in client_dll.c is for testing purposes.
+
+Also pointers expectedly break this epically. Avoid storing char* strings.
+
+Requires SDL2.
